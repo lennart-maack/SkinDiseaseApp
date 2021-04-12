@@ -19,10 +19,12 @@
         text-align: center;
         text-decoration: none;
         transition-duration: 0.4s;
-        display: inline-block;
         font-size: 20px;
-        margin: 4px 2px;
         cursor: pointer;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .button2:hover{
@@ -56,6 +58,7 @@
         justify-content: center;
     }
 
+
     </style>
 
 
@@ -69,15 +72,36 @@
       </div>
       <br>
       <imagesection class="container">
-        <h2>No photo uploaded yet</h2>
+        <h2>{{ prediction }}</h2>
       </imagesection>
       <br>
-      <div class = "centered">
-        <a class = "button2">Upload Photo</a>  
+      <div class= "button2">
+      <form method=POST enctype="multipart/form-data" id="form">
+        <input type="file" id="browse" name="file" style="display: none" onChange="Handlechange();"/>
+        <a onclick="HandleBrowseClick();">Upload photo</a>
+      </form>
       </div>
-      <br>
       <br>
       <p class = "centered">&copy; you name it</p>
     </section>
   </body>
+
+  <script>
+    function HandleBrowseClick()
+    {
+      var fileinput = document.getElementById("browse");
+      console.log("0");
+      fileinput.click();
+      console.log("1");
+    }
+   
+   function Handlechange()
+   {
+    var fileinput = document.getElementById("browse");
+    document.getElementById("form").submit();
+    console.log("2");
+   }
+   </script>
+
+
 </html>
