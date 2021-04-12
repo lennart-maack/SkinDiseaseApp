@@ -6,6 +6,13 @@ from flask import url_for
 
 app = Flask(__name__)
 UPLOAD_FOLDER = r"C:\Users\Admin\Documents\GitHub\SkinDiseaseApp\static"
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 @app.route("/", methods=["GET", "POST"])
 def starting_page(): 
@@ -20,17 +27,20 @@ def home_page():
 @app.route("/multidisease", methods=["GET", "POST"])
 def multidisease():
     if request.method == "POST":
-        image_file = request.files["image"] # "image" -> name of the input file in index.html
+        print("got POST")
+        print(request.files["file"])
+        image_file = request.files["file"] # "image" -> name of the input file in index.html
         # make sure that image_file excists
         if image_file:
+            print("got image_file")
             image_location = os.path.join(
                 UPLOAD_FOLDER,
                 image_file.filename
             )
             image_file.save(image_location)
-            return render_template("multidisease.html", prediction = "You uploaded an image to get predicted")
+            return render_template("multidisease.html", prediction = "", image_loc = image_file.filename)
             
-    return render_template("multidisease.html", prediction = "No Image uploaded")
+    return render_template("multidisease.html", prediction = "No photo uploaded yet")
 
 
 if __name__ == "__main__":
