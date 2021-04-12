@@ -73,14 +73,33 @@
       <br>
       <imagesection class="container">
         <h2>{{ prediction }}</h2>
+        {%if image_loc %}
+        <img class="centered" src="static/{{ image_loc }}" alt="" width="450" height="450">
+        {%endif%}
       </imagesection>
       <br>
+      {% if image_loc %}
+      <br>
+      <h3 class="centered">You uploaded an image</h3>
+      <br>
+      <br>
+      {%endif%}
+      {% if not image_loc %}
       <div class= "button2">
       <form method=POST enctype="multipart/form-data" id="form">
         <input type="file" id="browse" name="file" style="display: none" onChange="Handlechange();"/>
         <a onclick="HandleBrowseClick();">Upload photo</a>
       </form>
       </div>
+      {%endif%}
+      {% if image_loc %}
+      <div class= "button2">
+      <form method=POST enctype="multipart/form-data" id="prediction_form">
+        <input type="predict" id="predict" name="prediction" style="display: none" onChange="Handlechange();"/>
+        <a onclick="HandleBrowseClick();">Predict</a>
+      </form>
+      </div>
+      {%endif%}
       <br>
       <p class = "centered">&copy; you name it</p>
     </section>
