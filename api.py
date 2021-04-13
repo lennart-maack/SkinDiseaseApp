@@ -4,10 +4,11 @@ from flask import request
 from flask import render_template
 from flask import url_for
 
-app = Flask(__name__)
-UPLOAD_FOLDER = r"C:\Users\Admin\Documents\GitHub\SkinDiseaseApp\static"
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+###################################################################################
 
+app = Flask(__name__)
+UPLOAD_FOLDER = r"static\image_to_predict"
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 def allowed_file(filename):
     return '.' in filename and \
