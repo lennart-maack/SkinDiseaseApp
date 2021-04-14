@@ -4,10 +4,10 @@ import shutil, os
 import glob
 from tqdm import tqdm
 
-    """
-    this val_split.py script is used to split the 2019 Training Data
-    from https://challenge.isic-archive.com/data according to the groundtruth files into train and val
-    """
+"""
+this val_split.py script is used to split the 2019 Training Data
+from https://challenge.isic-archive.com/data according to the groundtruth files into train and val
+"""
 
 
 
