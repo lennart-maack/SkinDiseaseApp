@@ -93,11 +93,8 @@
       </div>
       {%endif%}
       {% if image_loc %}
-      <div class= "button2">
-      <form method=POST enctype="multipart/form-data" id="prediction_form">
-        <input type="predict" id="predict" name="prediction" style="display: none" onChange="Handlechange();"/>
-        <a onclick="HandleBrowseClick();">Predict</a>
-      </form>
+      <div>
+        <a href="{{ url_for('prediction') }}" class = "button2">Make a Prediction</a>
       </div>
       {%endif%}
       <br>
