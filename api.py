@@ -11,12 +11,8 @@ import prediction as pred
 ###################################################################################
 
 app = Flask(__name__)
-UPLOAD_FOLDER = r"static\image_to_predict"
+UPLOAD_FOLDER = r"static/image_to_predict"
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -67,4 +63,4 @@ def prediction():
 
 
 if __name__ == "__main__":
-    app.run(port = 8000, debug = True)
+    app.run(host="0.0.0.0", port = 8080)
