@@ -20,8 +20,8 @@ class Predictor():
     def __init__(self):
         self.mean = [0.485, 0.456, 0.406]
         self.std = [0.229, 0.224, 0.255]
-        self.input_path_predict_img = r"static\image_to_predict"
-        self.groundtruth_path = r"static\predict_csv"
+        self.input_path_predict_img = r"static/image_to_predict"
+        self.groundtruth_path = r"static/predict_csv"
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = nnModel.SEResnext50_32x4d(pretrained=None)
         self.model_path = "model_8.bin"
@@ -51,15 +51,15 @@ class Predictor():
         # base_name = os.path.basename(self.input_path_predict_img)
         # outpath = os.path.join(output_folder, base_name)
         
-        path = r"static\image_to_predict"
+        path = r"static/image_to_predict"
         
         image_names = [z for _,_,z in os.walk(self.input_path_predict_img)]
         
-        img = Image.open(self.input_path_predict_img + "\\" + image_names[0][0])
+        img = Image.open(self.input_path_predict_img + "//" + image_names[0][0])
         img = img.resize(
             (512, 512), resample=Image.BILINEAR
         )
-        img.save(path + "\\" + image_names[0][0], "JPEG") 
+        img.save(path + "//" + image_names[0][0], "JPEG") 
     
     
     

@@ -11,7 +11,7 @@ class Melanoma_Dataset(Dataset):
     def __init__(self, groundtruth_path, image_path, transform = None, val = False):
         
         groundtruth_file_name = [z for _,_,z in os.walk(groundtruth_path)]
-        self.groundtruth = pd.read_csv(groundtruth_path + "\\" + groundtruth_file_name[0][0])
+        self.groundtruth = pd.read_csv(groundtruth_path + "//" + groundtruth_file_name[0][0])
         self.image_path = image_path
         self.transform = transform
         
