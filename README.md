@@ -1,6 +1,6 @@
 ﻿# SkinDiseaseApp
 
-You can access the Web Application via this link: https://skindisease-app-qponjmrneq-ey.a.run.app/
+You can access the Web Application via this link (first loading of the page may take 5-15 seconds): https://skindisease-app-qponjmrneq-ey.a.run.app/
 
 ## Context
 
