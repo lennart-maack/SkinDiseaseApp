@@ -1,5 +1,6 @@
 ﻿# SkinDiseaseApp
 
+You can access the Web Application via this link: https://skindisease-app-qponjmrneq-ey.a.run.app/
 
 ## Context
 
