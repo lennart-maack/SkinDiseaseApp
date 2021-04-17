@@ -50,7 +50,7 @@ def prediction():
     
     predictor = pred.Predictor()
     prediction = predictor.predict()
-        
+       
     images = glob.glob('static/image_to_predict/*')
     for i in images:
         os.remove(i)

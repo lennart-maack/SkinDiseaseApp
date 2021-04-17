@@ -32,6 +32,7 @@ class Predictor():
         model.eval()
         with torch.no_grad():
             for i, (data, _) in enumerate(predict_loader):
+                
                 data= data.to(self.device)
                 output = model(data)
 
@@ -89,6 +90,7 @@ class Predictor():
         
         predict_loader = torch.utils.data.DataLoader(dataset = predict_dataset, batch_size = 1,
                                                     shuffle = False)
+        
         
         model_pred = self.model
         model_pred.load_state_dict(torch.load(self.model_path, map_location=torch.device('cpu')))
