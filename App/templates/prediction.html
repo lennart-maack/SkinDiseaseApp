@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20190328/ourmid/pngtree-vector-health-icon-png-image_872129.jpg">
+    <title>Your Prediction</title>
+    <style type="text/css">
+    body{
+        font-family: san-serif;
+    }
+    
+    .button2 {
+        background-color: #0099ff;
+        border-radius: 12px;
+        width: 300px;
+        border: 2px solid #0099ff;
+        color: white;
+        padding: 20px 34px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        text-align: center;
+        text-decoration: none;
+        transition-duration: 0.4s;
+        font-size: 20px;
+        cursor: pointer;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button2:hover{
+        background-color: white;
+        color:#0099ff;
+    }
+
+    section{
+        height: 90 vh;
+    }
+
+    imagesection{
+      /*border: 10px solid rgb(255, 255, 255);*/
+      height: 50vh;
+      width: 50vh;
+    }
+    .container{
+        border: 4px solid rgb(56, 177, 233);
+        border-radius: 12px;
+        max-width:500px;
+        margin: auto;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+    .centered{
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <section>
+      <br>
+      <div class="container">
+        <div class= "centered">
+            <h1>Your Prediction</h1>
+        </div>
+      </div>
+      <br>
+      <imagesection>
+        <div class = "centered">
+            <h2>You may have the skin disease:</h2>
+        </div>
+        <div class = "centered">
+            {% if prediction == 0 %}
+                <a href="https://de.wikipedia.org/wiki/Malignes_Melanom">
+                    <h1>Melanoma (Please contact a doctor)</h1>
+                </a>
+            {%endif%}
+            {% if prediction == 1 %}
+                <a href="https://de.wikipedia.org/wiki/Pigmentn%C3%A4vus">
+                    <h1>Melanocytic  Nevus</h1>
+                </a>
+            {%endif%}
+            {% if prediction == 2 %}
+                <a href="https://de.wikipedia.org/wiki/Basaliom">
+                    <h1>Basal  Cell  Carci-Noma</h1>
+                </a>
+            {%endif%}
+            {% if prediction == 3 %}
+                <a href="https://de.wikipedia.org/wiki/Aktinische_Keratose">
+                    <h1>Actinic Keratosis</h1>
+                </a>
+            {%endif%}
+            {% if prediction == 4 %}
+                <a href="https://flexikon.doccheck.com/de/Lentigo_senilis">
+                    <h1>Lentigo Senilis</h1>
+                </a>
+            {%endif%}
+            {% if prediction == 5 %}
+                <a href="https://de.wikipedia.org/wiki/Dermatofibrom">
+                    <h1>Dermatofibroma</h1>
+                </a>
+            {%endif%}
+            {% if prediction == 6 %}
+                <a href="https://en.wikipedia.org/wiki/Vascular_anomaly">
+                    <h1>Vascular  Lesion</h1>
+                </a>
+            {%endif%}
+            {% if prediction == 7 %}
+                <a href="https://de.wikipedia.org/wiki/Plattenepithelkarzinom">
+                    <h1>Squamouscell Carcinoma</h1>
+                </a>
+            {%endif%}
+        </div>
+      </imagesection>
+      <br>
+      <div>
+        <a href="{{ url_for('home') }}" class = "button2">Go back to the starting page</a>
+      </div>
+      <br>
+      
+    </section>
+  </body>
+
+
+</html>
