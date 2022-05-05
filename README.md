@@ -5,7 +5,7 @@
 - [Context](#context)
 - [How does the App work](#how-does-the-app-work)
   - [User Interface](#user-interface)
-  - [Training and Results](#training-and-results)
+- [Training of the model and Results](#training-of-the-model-and-results)
 
 
 ## Context
@@ -45,6 +45,7 @@ To solve these problems, more images need to be taken and the equipment that was
 - Use of pretrained SEResNext50 as basemodel
 - Different augmentations such as Random Horizontal Flip, Random Vertical Flip, Random Rotation and Random Color Jitter
 - Use of learning rate scheduler based on area under curve (AUC) of the receriver operating characteristic curve (ROC)
-- Overall sensitivity of 84.32%
+- Overall sensitivity of 84.32% on test data
+- This model applied on the ISIC 2019 achieved a balanced multi-class accuracy of 53.2% (ISIC 2019 Winner: 63.6%)
 
 [Paper of the project](Skin_leasion_classification_using_cnns.pdf)
