@@ -1,5 +1,7 @@
 ﻿# SkinDiseaseApp <!-- omit in toc -->
 
+To run the application, use the docker image from: [docker.com/r/lennartma/skinapp](https://hub.docker.com/r/lennartma/skinapp)
+
 ## Table of Content <!-- omit in toc -->
 
 - [Context](#context)
