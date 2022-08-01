@@ -14,7 +14,7 @@ To run the application, use the docker image from: [docker.com/r/lennartma/skina
 
 The App is based on the [International Skin Imaging Collaboration (ISIC) Challenge 2019](https://challenge.isic-archive.com/landing/2019/).
 
-- The goal for ISIC 2019 is classify dermoscopic images among nine different diagnostic categories:
+- The aim of ISIC 2019 is to classify dermoscopic images into nine different diagnostic categories:
   1. Melanoma
   2. Melanocytic nevus
   3. Basal cell carcinoma
