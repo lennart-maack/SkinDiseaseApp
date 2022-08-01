@@ -29,11 +29,11 @@ The App is based on the [International Skin Imaging Collaboration (ISIC) Challen
 
 ## How does the App work
 
-Although the CNN model achieves overall sensitivity of 84.32% on the test set, it will probably perform poorly on your images taken by your phone. This is because:
-- All images for training and testing were taken by medical experts with special equipments
-- Images taken by your own phone will probably have different perspectives to the skin leasion and lenses that display the images differently
+Although the CNN model achieves overall sensitivity of 84.32% on the test set, it will probably perform poorly on images taken by your phone. This is because:
+- All images for training and testing were taken by medical experts with special imaging equipments
+- Images taken by your own phone will probably have different perspectives to the skin leasion and lenses that display the images differently (brightness, contrast, image quality)
 
-To solve these problems, more images need to be taken and the equipment that was used to take training images and test images has to be the same (equal)
+To solve these problems, more images need to be taken and the equipment that was used to take training images and test images has to be the same.
 
 ### User Interface
 
